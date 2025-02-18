@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "esnext",                              // Cible ESNext pour un support moderne du JS
+    "module": "esnext",                              // Utilise ESModules
+    "moduleResolution": "node",                      // Résolution de module type Node.js
+    "lib": ["dom", "esnext"],                        // Bibliothèques nécessaires pour le DOM et ESNext
+    "jsx": "preserve",                               // Support JSX dans les fichiers Vue
+    "strict": true,                                  // Active toutes les options de vérification stricte
+    "esModuleInterop": true,                         // Permet d'importer des modules CommonJS
+    "skipLibCheck": true,                            // Ignore les vérifications des types des bibliothèques
+    "forceConsistentCasingInFileNames": true,        // Assure une cohérence de la casse des noms de fichiers
+    "resolveJsonModule": true,                       // Permet d'importer des fichiers JSON
+    "baseUrl": "./src",                              // Définit le répertoire de base pour les imports
+    "paths": {
+      "@/*": ["./src/*"]                             // Permet d'utiliser des alias pour les chemins (ex: @/components)
+    }
+  },
+  "include": [
+    "src/**/*.ts",                                  // Inclut tous les fichiers TypeScript dans src
+    "src/**/*.d.ts",                                // Inclut les déclarations de type
+    "src/**/*.tsx",                                 // Inclut les fichiers .tsx pour JSX
+    "src/**/*.vue"                                  // Inclut les fichiers Vue
+  ],
+  "exclude": [
+    "node_modules",                                 // Exclut node_modules
+    "dist"                                          // Exclut le répertoire de build
+  ]
+}

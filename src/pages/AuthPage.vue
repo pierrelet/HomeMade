@@ -52,28 +52,26 @@
   
   const router = useRouter();
   
-  // States for form inputs
   const username = ref('');
   const email = ref('');
   const password = ref('');
   
-  // To toggle between login and sign-up mode
   const isLogin = ref(true);
   
-  // Handle form submission (Login or Sign-up)
+  
   const handleSubmit = () => {
     if (isLogin.value) {
-      // Simulate login
+      
       console.log('Connexion réussie pour:', username.value);
-      router.push('/');  // Redirect to home
+      router.push('/');  
     } else {
-      // Simulate sign-up
+     
       console.log('Inscription réussie pour:', username.value);
-      router.push('/');  // Redirect to home
+      router.push('/');  
     }
   };
   
-  // Toggle between login and sign-up mode
+  
   const toggleAuthMode = () => {
     isLogin.value = !isLogin.value;
   };

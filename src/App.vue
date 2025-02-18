@@ -1,7 +1,13 @@
 <template>
   <div id="app">
-    <!-- Barre de navigation -->
+   
     <nav>
+   
+      <div class="logo-container">
+        <img src="./assets/logo.jpg" alt="HomeMade Logo" class="logo" />
+      </div>
+
+      
       <ul>
         <li><router-link to="/">Accueil</router-link></li>
         <li><router-link to="/chefs">Cuisiniers</router-link></li>
@@ -10,17 +16,16 @@
       </ul>
     </nav>
 
-    <!-- Rendu du contenu selon la route -->
-    <router-view></router-view> <!-- Affiche le composant correspondant à la route actuelle -->
+    
+    <router-view></router-view> 
   </div>
 </template>
 
 <script setup lang="ts">
-// Ici, tu peux importer des composants, gérer des données ou des événements si nécessaire
+
 </script>
 
 <style scoped>
-/* Styles généraux pour l'application */
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -29,16 +34,34 @@
   text-align: center;
 }
 
+
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #333;
   color: white;
-  padding: 10px;
+  padding: 10px 20px;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+nav img.logo {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
 
 nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -54,5 +77,29 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
-</style>
 
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #444;
+}
+</style>
